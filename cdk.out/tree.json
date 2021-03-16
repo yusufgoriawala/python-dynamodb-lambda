@@ -1,0 +1,694 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.93.0"
+        }
+      },
+      "dynamodb-lambda": {
+        "id": "dynamodb-lambda",
+        "path": "dynamodb-lambda",
+        "children": {
+          "demo_table": {
+            "id": "demo_table",
+            "path": "dynamodb-lambda/demo_table",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "dynamodb-lambda/demo_table/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "id",
+                        "keyType": "HASH"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "id",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "provisionedThroughput": {
+                      "readCapacityUnits": 5,
+                      "writeCapacityUnits": 5
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-dynamodb.CfnTable",
+                  "version": "1.93.0"
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "dynamodb-lambda/demo_table/ScalingRole",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.93.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-dynamodb.Table",
+              "version": "1.93.0"
+            }
+          },
+          "producer_lambda_function": {
+            "id": "producer_lambda_function",
+            "path": "dynamodb-lambda/producer_lambda_function",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "dynamodb-lambda/producer_lambda_function/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "dynamodb-lambda/producer_lambda_function/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.93.0"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "dynamodb-lambda/producer_lambda_function/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dynamodb-lambda/producer_lambda_function/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "dynamodb:BatchWriteItem",
+                                    "dynamodb:PutItem",
+                                    "dynamodb:UpdateItem",
+                                    "dynamodb:DeleteItem"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "demotable002BE91A",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Ref": "AWS::NoValue"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "producerlambdafunctionServiceRoleDefaultPolicy727DC938",
+                            "roles": [
+                              {
+                                "Ref": "producerlambdafunctionServiceRole5400FE21"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.93.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.93.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.93.0"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "dynamodb-lambda/producer_lambda_function/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "dynamodb-lambda/producer_lambda_function/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.93.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "dynamodb-lambda/producer_lambda_function/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.93.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.93.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "dynamodb-lambda/producer_lambda_function/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefbS3Bucket683185F2"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefbS3VersionKeyFC74E4EF"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefbS3VersionKeyFC74E4EF"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "producerlambdafunctionServiceRole5400FE21",
+                        "Arn"
+                      ]
+                    },
+                    "environment": {
+                      "variables": {
+                        "TABLE_NAME": {
+                          "Ref": "demotable002BE91A"
+                        }
+                      }
+                    },
+                    "handler": "lambda_function.lambda_handler",
+                    "runtime": "python3.6"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.93.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.93.0"
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "dynamodb-lambda/AssetParameters",
+            "children": {
+              "84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefb": {
+                "id": "84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefb",
+                "path": "dynamodb-lambda/AssetParameters/84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefb",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "dynamodb-lambda/AssetParameters/84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefb/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.93.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "dynamodb-lambda/AssetParameters/84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefb/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.93.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "dynamodb-lambda/AssetParameters/84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefb/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.93.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.93.0"
+                }
+              },
+              "f95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070a": {
+                "id": "f95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070a",
+                "path": "dynamodb-lambda/AssetParameters/f95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070a",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "dynamodb-lambda/AssetParameters/f95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070a/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.93.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "dynamodb-lambda/AssetParameters/f95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070a/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.93.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "dynamodb-lambda/AssetParameters/f95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070a/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.93.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.93.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.93.0"
+            }
+          },
+          "consumer_lambda_function": {
+            "id": "consumer_lambda_function",
+            "path": "dynamodb-lambda/consumer_lambda_function",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "dynamodb-lambda/consumer_lambda_function/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "dynamodb-lambda/consumer_lambda_function/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.93.0"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "dynamodb-lambda/consumer_lambda_function/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dynamodb-lambda/consumer_lambda_function/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "dynamodb:BatchGetItem",
+                                    "dynamodb:GetRecords",
+                                    "dynamodb:GetShardIterator",
+                                    "dynamodb:Query",
+                                    "dynamodb:GetItem",
+                                    "dynamodb:Scan",
+                                    "dynamodb:ConditionCheckItem"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "demotable002BE91A",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Ref": "AWS::NoValue"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "consumerlambdafunctionServiceRoleDefaultPolicy3D6F3025",
+                            "roles": [
+                              {
+                                "Ref": "consumerlambdafunctionServiceRole116B0746"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.93.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.93.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.93.0"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "dynamodb-lambda/consumer_lambda_function/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "dynamodb-lambda/consumer_lambda_function/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.93.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "dynamodb-lambda/consumer_lambda_function/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.93.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.93.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "dynamodb-lambda/consumer_lambda_function/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParametersf95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070aS3BucketD97E16DB"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersf95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070aS3VersionKey4BD30F56"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersf95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070aS3VersionKey4BD30F56"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "consumerlambdafunctionServiceRole116B0746",
+                        "Arn"
+                      ]
+                    },
+                    "environment": {
+                      "variables": {
+                        "TABLE_NAME": {
+                          "Ref": "demotable002BE91A"
+                        }
+                      }
+                    },
+                    "handler": "lambda_function.lambda_handler",
+                    "runtime": "python3.6"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.93.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.93.0"
+            }
+          },
+          "one_minute_rule": {
+            "id": "one_minute_rule",
+            "path": "dynamodb-lambda/one_minute_rule",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "dynamodb-lambda/one_minute_rule/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Events::Rule",
+                  "aws:cdk:cloudformation:props": {
+                    "scheduleExpression": "rate(1 minute)",
+                    "state": "ENABLED",
+                    "targets": [
+                      {
+                        "id": "Target0",
+                        "arn": {
+                          "Fn::GetAtt": [
+                            "producerlambdafunctionCE724CE7",
+                            "Arn"
+                          ]
+                        }
+                      },
+                      {
+                        "id": "Target1",
+                        "arn": {
+                          "Fn::GetAtt": [
+                            "consumerlambdafunction40710347",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-events.CfnRule",
+                  "version": "1.93.0"
+                }
+              },
+              "AllowEventRuledynamodblambdaproducerlambdafunction1E714662": {
+                "id": "AllowEventRuledynamodblambdaproducerlambdafunction1E714662",
+                "path": "dynamodb-lambda/one_minute_rule/AllowEventRuledynamodblambdaproducerlambdafunction1E714662",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                  "aws:cdk:cloudformation:props": {
+                    "action": "lambda:InvokeFunction",
+                    "functionName": {
+                      "Fn::GetAtt": [
+                        "producerlambdafunctionCE724CE7",
+                        "Arn"
+                      ]
+                    },
+                    "principal": "events.amazonaws.com",
+                    "sourceArn": {
+                      "Fn::GetAtt": [
+                        "oneminuteruleE9168CE5",
+                        "Arn"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnPermission",
+                  "version": "1.93.0"
+                }
+              },
+              "AllowEventRuledynamodblambdaconsumerlambdafunction1EF0C7D6": {
+                "id": "AllowEventRuledynamodblambdaconsumerlambdafunction1EF0C7D6",
+                "path": "dynamodb-lambda/one_minute_rule/AllowEventRuledynamodblambdaconsumerlambdafunction1EF0C7D6",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                  "aws:cdk:cloudformation:props": {
+                    "action": "lambda:InvokeFunction",
+                    "functionName": {
+                      "Fn::GetAtt": [
+                        "consumerlambdafunction40710347",
+                        "Arn"
+                      ]
+                    },
+                    "principal": "events.amazonaws.com",
+                    "sourceArn": {
+                      "Fn::GetAtt": [
+                        "oneminuteruleE9168CE5",
+                        "Arn"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnPermission",
+                  "version": "1.93.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-events.Rule",
+              "version": "1.93.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "dynamodb-lambda/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "dynamodb-lambda/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.93.0"
+                }
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "dynamodb-lambda/CDKMetadata/Condition",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnCondition",
+                  "version": "1.93.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.93.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.93.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.93.0"
+    }
+  }
+}

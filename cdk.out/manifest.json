@@ -1,0 +1,464 @@
+{
+  "version": "9.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "dynamodb-lambda": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "dynamodb-lambda.template.json"
+      },
+      "metadata": {
+        "/dynamodb-lambda": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefb",
+              "id": "84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefb",
+              "packaging": "zip",
+              "sourceHash": "84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefb",
+              "s3BucketParameter": "AssetParameters84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefbS3Bucket683185F2",
+              "s3KeyParameter": "AssetParameters84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefbS3VersionKeyFC74E4EF",
+              "artifactHashParameter": "AssetParameters84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefbArtifactHash57EA3B26"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:399:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:175:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:83:25)",
+              "Stack.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack.js:402:33)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:87:31)",
+              "new Asset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:40:44)",
+              "AssetCode.bind (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:250:26)",
+              "new Function (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:97:33)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.f95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070a",
+              "id": "f95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070a",
+              "packaging": "zip",
+              "sourceHash": "f95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070a",
+              "s3BucketParameter": "AssetParametersf95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070aS3BucketD97E16DB",
+              "s3KeyParameter": "AssetParametersf95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070aS3VersionKey4BD30F56",
+              "artifactHashParameter": "AssetParametersf95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070aArtifactHashA2680054"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:399:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:175:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:83:25)",
+              "Stack.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack.js:402:33)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:87:31)",
+              "new Asset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:40:44)",
+              "AssetCode.bind (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:250:26)",
+              "new Function (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:97:33)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/demo_table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "demotable002BE91A",
+            "trace": [
+              "new Table (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:456:22)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/producer_lambda_function/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "producerlambdafunctionServiceRole5400FE21",
+            "trace": [
+              "new Role (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:72:22)",
+              "new Function (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:79:35)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/producer_lambda_function/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "producerlambdafunctionServiceRoleDefaultPolicy727DC938",
+            "trace": [
+              "new Policy (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:56:26)",
+              "Role.addToPrincipalPolicy (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:205:34)",
+              "Function.addToPrincipal (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:90:65)",
+              "Table.combinedGrant (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:384:35)",
+              "Table.grantWriteData (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:156:21)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:107",
+              "Kernel._ensureSync (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3129:28)",
+              "Kernel.invoke (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:34)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/producer_lambda_function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "producerlambdafunctionCE724CE7",
+            "trace": [
+              "new Function (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:135:26)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/AssetParameters/84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefb/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefbS3Bucket683185F2",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:162:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:83:25)",
+              "Stack.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack.js:402:33)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:87:31)",
+              "new Asset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:40:44)",
+              "AssetCode.bind (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:250:26)",
+              "new Function (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:97:33)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/AssetParameters/84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefb/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefbS3VersionKeyFC74E4EF",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:162:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:83:25)",
+              "Stack.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack.js:402:33)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:87:31)",
+              "new Asset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:40:44)",
+              "AssetCode.bind (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:250:26)",
+              "new Function (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:97:33)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/AssetParameters/84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefb/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters84262bf2bdec45921e7bab77da486cdf76d4b391396ef911aee52dd410b4fefbArtifactHash57EA3B26",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:162:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:83:25)",
+              "Stack.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack.js:402:33)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:87:31)",
+              "new Asset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:40:44)",
+              "AssetCode.bind (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:250:26)",
+              "new Function (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:97:33)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/AssetParameters/f95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070a/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersf95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070aS3BucketD97E16DB",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:162:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:83:25)",
+              "Stack.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack.js:402:33)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:87:31)",
+              "new Asset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:40:44)",
+              "AssetCode.bind (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:250:26)",
+              "new Function (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:97:33)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/AssetParameters/f95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070a/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersf95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070aS3VersionKey4BD30F56",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:162:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:83:25)",
+              "Stack.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack.js:402:33)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:87:31)",
+              "new Asset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:40:44)",
+              "AssetCode.bind (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:250:26)",
+              "new Function (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:97:33)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/AssetParameters/f95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070a/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersf95e0c206ce2456a379d64d2db1f9a00775736168199c355d32c9ec7bbc8070aArtifactHashA2680054",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:162:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:83:25)",
+              "Stack.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack.js:402:33)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:87:31)",
+              "new Asset (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:40:44)",
+              "AssetCode.bind (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:250:26)",
+              "new Function (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:97:33)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/consumer_lambda_function/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "consumerlambdafunctionServiceRole116B0746",
+            "trace": [
+              "new Role (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:72:22)",
+              "new Function (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:79:35)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/consumer_lambda_function/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "consumerlambdafunctionServiceRoleDefaultPolicy3D6F3025",
+            "trace": [
+              "new Policy (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:56:26)",
+              "Role.addToPrincipalPolicy (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:205:34)",
+              "Function.addToPrincipal (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.js:90:65)",
+              "Table.combinedGrant (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:384:35)",
+              "Table.grantReadData (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:115:21)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:107",
+              "Kernel._ensureSync (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3129:28)",
+              "Kernel.invoke (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:34)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/consumer_lambda_function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "consumerlambdafunction40710347",
+            "trace": [
+              "new Function (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:135:26)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/one_minute_rule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oneminuteruleE9168CE5",
+            "trace": [
+              "new Rule (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-events\\lib\\rule.js:33:26)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "Kernel._create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2720:34)",
+              "Kernel.create (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2461:29)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/one_minute_rule/AllowEventRuledynamodblambdaproducerlambdafunction1E714662": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oneminuteruleAllowEventRuledynamodblambdaproducerlambdafunction1E7146624783D604",
+            "trace": [
+              "Function.addPermission (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:40:9)",
+              "Object.addLambdaPermission (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\util.js:43:17)",
+              "LambdaFunction.bind (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\lambda.js:28:16)",
+              "Rule.addTarget (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-events\\lib\\rule.js:86:36)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:107",
+              "Kernel._ensureSync (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3129:28)",
+              "Kernel.invoke (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:34)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/one_minute_rule/AllowEventRuledynamodblambdaconsumerlambdafunction1EF0C7D6": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oneminuteruleAllowEventRuledynamodblambdaconsumerlambdafunction1EF0C7D6888AA909",
+            "trace": [
+              "Function.addPermission (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.js:40:9)",
+              "Object.addLambdaPermission (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\util.js:43:17)",
+              "LambdaFunction.bind (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-events-targets\\lib\\lambda.js:28:16)",
+              "Rule.addTarget (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\aws-events\\lib\\rule.js:86:36)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:107",
+              "Kernel._ensureSync (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3129:28)",
+              "Kernel.invoke (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:34)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.js:22:30)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:128:9",
+              "visit (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:184:9)",
+              "visit (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:181:9)",
+              "injectMetadataResources (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:117:5)",
+              "Object.synthesize (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:17:5)",
+              "App.synth (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stage.js:100:41)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:107",
+              "Kernel._ensureSync (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3129:28)",
+              "Kernel.invoke (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:34)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ],
+        "/dynamodb-lambda/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.js:30:35)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:128:9",
+              "visit (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:184:9)",
+              "visit (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:181:9)",
+              "injectMetadataResources (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:117:5)",
+              "Object.synthesize (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:17:5)",
+              "App.synth (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\jsii-kernel-Kkhajf\\node_modules\\@aws-cdk\\core\\lib\\stage.js:100:41)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3148:24)",
+              "C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:107",
+              "Kernel._ensureSync (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:3129:28)",
+              "Kernel.invoke (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:2536:34)",
+              "KernelHost.processRequest (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9457:36)",
+              "KernelHost.run (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9420:22)",
+              "Immediate._onImmediate (C:\\Users\\NESSUS~1\\AppData\\Local\\Temp\\tmphda2z2a6\\lib\\program.js:9421:46)",
+              "processImmediate (internal/timers.js:461:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
